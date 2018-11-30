@@ -6,8 +6,8 @@
 |#
 
 (defparameter *optimization*
-  #+claws-debug '(optimize (speed 0) (space 0) (safety 3) (debug 3) (compilation-speed 0) #+lispworks (float 3))
-  #-claws-debug '(optimize (speed 3) (space 0) (safety 0) (debug 0) (compilation-speed 0) #+lispworks (float 0)))
+  #+claws-debug '(optimize (speed 0) (space 0) (safety 3) (debug 3) (compilation-speed 0) #+lispworks (float 3) #+lispworks (hcl:fixnum-safety 3))
+  #-claws-debug '(optimize (speed 3) (space 0) (safety 0) (debug 0) (compilation-speed 0) #+lispworks (float 0) #+lispworks (hcl:fixnum-safety 0)))
 
 (defparameter *inline*
   #+claws-debug 'notinline

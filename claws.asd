@@ -29,4 +29,7 @@ OTHER DEALINGS IN THE SOFTWARE.
   :depends-on ()
   :components ((:file "claws-package")
                (:file "optimize" :depends-on ("claws-package"))
-               (:file "claws" :depends-on ("optimize"))))
+               (:file "claws" :depends-on ("optimize"))
+               (:file "lisp-utils" :depends-on ("optimize"))
+               (:file "quicksort" :depends-on ("lisp-utils" "claws"))
+               (:file "mergesort" :depends-on ("lisp-utils" "claws"))))
